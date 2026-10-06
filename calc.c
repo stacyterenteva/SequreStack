@@ -3,7 +3,6 @@
 void add(stack_t* stk)
 {
     double value = stk->data[stk->size - 1] + stk->data[stk->size - 2];
-    printf("%lg\n", value);
     stk->data[stk->size - 2] = value;
     stk->data[stk->size - 1] = 0;
     stk->size--;
@@ -12,7 +11,6 @@ void add(stack_t* stk)
 void sub(stack_t* stk)
 {
     double value = stk->data[stk->size - 2] - stk->data[stk->size - 1];
-    printf("%lg\n", value);
     stk->data[stk->size - 2] = value;
     stk->data[stk->size - 1] = 0;
     stk->size--;
@@ -26,7 +24,6 @@ void div(stack_t* stk)
     }
 
     double value = stk->data[stk->size - 2] / stk->data[stk->size - 1];
-    printf("%lg\n", value);
     stk->data[stk->size - 2] = value;
     stk->data[stk->size - 1] = 0;
     stk->size--;
